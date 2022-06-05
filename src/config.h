@@ -2,34 +2,34 @@
 /* src/config.h.in.  Generated from configure.ac by autoheader.  */
 
 /* Build platform */
-#define BUILD_BUILD_PLATFORM "x86_64-pc-linux-gnu"
+#define BUILD_BUILD_PLATFORM "x86_64-apple-darwin21.5.0"
 
 /* Compiler */
-#define BUILD_COMPILER "gcc version 10.3.0 (Ubuntu 10.3.0-1ubuntu1~20.10) "
+#define BUILD_COMPILER "InstalledDir: /Library/Developer/CommandLineTools/usr/bin"
 
 /* Configure arguments */
-#define BUILD_CONFIGURE_ARGS ""
+#define BUILD_CONFIGURE_ARGS "'--enable-static' 'LDFLAGS=-L/usr/local/lib'"
 
 /* Build date */
-#define BUILD_DATE "Wed Aug  4 17:49:44 CDT 2021"
+#define BUILD_DATE "Sun Jun  5 14:57:35 JST 2022"
 
 /* Build host */
-#define BUILD_HOST "m90p"
+#define BUILD_HOST "bigmac"
 
 /* Host platform */
-#define BUILD_HOST_PLATFORM "x86_64-pc-linux-gnu"
+#define BUILD_HOST_PLATFORM "x86_64-apple-darwin21.5.0"
 
 /* Target platform */
-#define BUILD_TARGET_PLATFORM "x86_64-pc-linux-gnu"
+#define BUILD_TARGET_PLATFORM "x86_64-apple-darwin21.5.0"
 
 /* Build user */
-#define BUILD_USER "dave"
+#define BUILD_USER "kenji"
 
 /* FLLOG compiler flags */
-#define FLLOG_BUILD_CXXFLAGS "-I$(srcdir) -I$(srcdir)/include -I$(srcdir)/xmlrpcpp -I$(srcdir)/xmlrpcpp -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I$(srcdir) -I$(srcdir)/include -pipe -Wall -fexceptions -O2 -ffast-math -finline-functions -fomit-frame-pointer -DNDEBUG"
+#define FLLOG_BUILD_CXXFLAGS "-I$(srcdir) -I$(srcdir)/include -I$(srcdir)/xmlrpcpp -I$(srcdir)/xmlrpcpp -I/usr/local/Cellar/fltk/1.3.8/include -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_THREAD_SAFE -D_REENTRANT -I$(srcdir) -I$(srcdir)/include -pipe -Wall -fexceptions -O2 -ffast-math -finline-functions -fomit-frame-pointer -DNDEBUG"
 
 /* FLLOG linker flags */
-#define FLLOG_BUILD_LDFLAGS "-lfltk_images -lfltk -lX11 -lX11 -ldl -lpthread"
+#define FLLOG_BUILD_LDFLAGS "/usr/local/Cellar/fltk/1.3.8/lib/libfltk_images.a -lpng -lz -ljpeg /usr/local/Cellar/fltk/1.3.8/lib/libfltk.a -lpthread -framework Cocoa"
 
 /* FLTK API major version */
 #define FLLOG_FLTK_API_MAJOR 1
@@ -50,7 +50,7 @@
 #define FLLOG_VERSION_PATCH ".7"
 
 /* FLTK version */
-#define FLTK_BUILD_VERSION "1.3.5"
+#define FLTK_BUILD_VERSION "1.3.8"
 
 /* flxmlrpc version */
 #define FLXMLRPC_BUILD_VERSION ""
@@ -98,7 +98,7 @@
 #define HAVE_SELECT 1
 
 /* Define to 1 if we have sem_timedwait */
-#define HAVE_SEM_TIMEDWAIT 1
+#define HAVE_SEM_TIMEDWAIT 0
 
 /* Define to 1 if we have sem_unlink */
 #define HAVE_SEM_UNLINK 1
@@ -146,7 +146,7 @@
 #define HAVE_STRING_H 1
 
 /* Define to 1 if you have the `strlcpy' function. */
-/* #undef HAVE_STRLCPY */
+#define HAVE_STRLCPY 1
 
 /* Define to 1 if you have the `strncasecmp' function. */
 #define HAVE_STRNCASECMP 1
@@ -231,13 +231,13 @@
 
 
 /* Define to 1 if we are using x */
-#define USE_X 1
+/* #undef USE_X */
 
 /* Version number of package */
 #define VERSION "1.2.7"
 
 /* x version */
-#define X_BUILD_VERSION "1.6.12"
+/* #undef X_BUILD_VERSION */
 
 /* Define to 1 if on MINIX. */
 /* #undef _MINIX */
