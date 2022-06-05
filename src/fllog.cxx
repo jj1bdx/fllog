@@ -25,6 +25,7 @@
 #include "config.h"
 
 #include <stdlib.h>
+#include <string>
 #include <iostream>
 #include <fstream>
 #include <cstring>
@@ -81,10 +82,10 @@
 int parse_args(int argc, char **argv, int& idx);
 
 Fl_Double_Window *mainwindow = NULL;
-string LogHomeDir;
-string TempDir;
-string defFileName;
-string title;
+std::string LogHomeDir;
+std::string TempDir;
+std::string defFileName;
+std::string title;
 
 //pthread_t *serial_thread = 0;
 //pthread_t *digi_thread = 0;
@@ -148,6 +149,8 @@ void LOGBOOK_colors_font()
 	int width_pwr  = fl_width("0000");
 	int width_loc  = fl_width("XX88XXX");
 	int width_mode = fl_width("CONTESTIA");
+	// 2/3 of width_mode
+	int width_submode = fl_width("MFSK16");
 
 	int dlg_width =	inpDate_log->x() +
 					width_date + 2 +
@@ -155,6 +158,7 @@ void LOGBOOK_colors_font()
 					width_time + 2 +
 					width_freq + 2 +
 					width_mode + 2 +
+					width_submode + 2 +
 					width_pwr + 2 +
 					width_rst + 2;
 //					+ width_date + 2;
@@ -167,9 +171,10 @@ void LOGBOOK_colors_font()
 		width_pwr  = (int)(1.0 * width_pwr * progStatus.mainW / dlg_width);
 		width_loc  = (int)(1.0 * width_loc * progStatus.mainW / dlg_width);
 		width_mode = (int)(1.0 * width_mode * progStatus.mainW / dlg_width);
+		width_submode = (int)(1.0 * width_submode * progStatus.mainW / dlg_width);
 		width_freq = (progStatus.mainW -
 						width_date - width_time - width_mode -
-						width_pwr - width_rst - 14);
+						width_submode - width_pwr - width_rst - 14);
 		dlg_width = progStatus.mainW;
 	}
 
@@ -232,8 +237,11 @@ void LOGBOOK_colors_font()
 	xpos = inpRstS_log->x() - 2 - width_pwr;
 	inp_font_pos(inpTX_pwr_log, xpos, ypos, width_pwr, wh);
 
-	xpos = inpFreq_log->x() + width_freq + 2;
-	xwidth = inpTX_pwr_log->x() - 2 - xpos;
+	xpos = inpTX_pwr_log->x() - 2 - width_submode;
+	inp_font_pos(inpSubMode_log, xpos, ypos, width_submode, wh);
+
+	xpos = inpName_log->x();
+	xwidth = inpSubMode_log->x() - 2 - xpos;
 	inp_font_pos(inpMode_log, xpos, ypos, xwidth, wh);
 
 // row 3
@@ -509,14 +517,14 @@ void visit_URL(void* arg)
 			 strerror(errno), url);
 	}
 #else
-	if ((int)ShellExecute(NULL, "open", url, NULL, NULL, SW_SHOWNORMAL) <= 32)
+	if ((size_t)ShellExecute(NULL, "open", url, NULL, NULL, SW_SHOWNORMAL) <= 32)
 		fl_alert(_("Could not open url:\n%s\n"), url);
 #endif
 }
 
 void about()
 {
-	string msg = "\
+	std::string msg = "\
 %s\n\
 Version %s\n\
 copyright W1HKJ, 2009-11\n\
@@ -581,7 +589,7 @@ void make_pixmap(Pixmap *xpm, const char **data)
 static void checkdirectories(void)
 {
 	struct {
-		string& dir;
+		std::string& dir;
 		const char* suffix;
 		void (*new_dir_func)(void);
 	} dirs[] = {
@@ -594,7 +602,7 @@ static void checkdirectories(void)
 			dirs[i].dir.assign(LogHomeDir).append(dirs[i].suffix).append("/");
 
 		if ((r = mkdir(dirs[i].dir.c_str(), 0777)) == -1 && errno != EEXIST) {
-			cerr << _("Could not make directory") << ' ' << dirs[i].dir
+			std::cerr << _("Could not make directory") << ' ' << dirs[i].dir
 				 << ": " << strerror(errno) << '\n';
 			exit(EXIT_FAILURE);
 		}
@@ -647,12 +655,12 @@ int main (int argc, char *argv[])
 	checkdirectories();
 
 	try {
-		debug::start(string(LogHomeDir).append("status_log.txt").c_str());
+		debug::start(std::string(LogHomeDir).append("status_log.txt").c_str());
 		time_t t = time(NULL);
 		LOG(debug::INFO_LEVEL, debug::LOG_OTHER, _("%s log started on \n%s"), PACKAGE_STRING, ctime(&t));
 	}
 	catch (const char* error) {
-		cerr << error << '\n';
+		std::cerr << error << '\n';
 		debug::stop();
 		exit(1);
 	}
