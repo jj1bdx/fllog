@@ -1,5 +1,5 @@
 # data file for the Fltk User Interface Designer (fluid)
-version 1.0305
+version 1.0308
 i18n_type 1
 i18n_include "gettext.h"
 i18n_function _
@@ -29,8 +29,8 @@ decl {\#include "flinput2.h"} {public local
 Function {create_logbook_dialogs()} {open return_type void
 } {
   Fl_Window dlgLogbook {
-    label Logbook
-    xywh {381 49 590 433} type Double color 47 hide resizable
+    label Logbook open
+    xywh {381 53 590 433} type Double color 47 resizable visible
   } {
     Fl_Menu_Bar {} {
       xywh {0 0 590 24}
@@ -266,7 +266,7 @@ o->value(call.c_str());}
     } {
       Fl_Group tab_log_qsl {
         label QSL open
-        xywh {5 179 475 96}
+        xywh {5 179 475 96} hide
       } {
         Fl_Input inpQSLrcvddate_log {
           label {QSL-rcvd}
@@ -353,10 +353,11 @@ o->value(call.c_str());}
       }
       Fl_Group tab_log_notes {
         label Notes open
-        xywh {5 179 475 96} hide
+        xywh {5 179 475 96}
       } {
-        Fl_Input inpNotes_log {
+        Fl_Input inpNotes_log {selected
           tooltip {Interesting notes} xywh {10 181 465 85} type Multiline align 21
+          code0 {o->wrap(1);}
           class Fl_Input2
         }
       }
@@ -542,7 +543,7 @@ wBrowser->gridEnabled (0);
 dlgLogbook->xclass(PACKAGE_TARNAME);} {}
   Fl_Window wExport {
     label {Export Setup} open
-    xywh {548 66 810 440} type Double visible
+    xywh {548 66 810 440} type Double hide
   } {
     Fl_Group {} {
       label {Select Records to Export} open
@@ -1060,7 +1061,7 @@ Export_log();}
         xywh {675 242 70 15} down_box DOWN_BOX
       }
       Fl_Check_Button btnSelect_cwss_serno {
-        label {CW SS SerNo} selected
+        label {CW SS SerNo}
         tooltip {CW sweepstakes rcvd ser. no.} xywh {675 264 70 15} down_box DOWN_BOX
       }
       Fl_Check_Button btnSelect_cwss_prec {
