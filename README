@@ -1,0 +1,16 @@
+Fllog is a logbook application for Amateur Radio use.  It supports the
+identical adif logbook in fldigi.  fllog can act as a server to multiple
+clients over LAN/WAN tcpip connections.  Multiple fldigi / flwkey clients
+may connect to the fllog server.
+
+The latest version can always be found at:
+
+  http://www.w1hkj.com/
+
+Join the linuxham, NBEMSham or win-fldigi Yahoo group for support, news 
+and updates on W1HKJ software:
+
+  http://groups.yahoo.com/group/linuxham/join
+  http://groups.yahoo.com/group/NBEMSham/join
+  http://groups.yahoo.com/group/win-fldigi/join
+

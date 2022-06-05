@@ -1,0 +1,124 @@
+2021-08-04  dave-w1hkj  <w1hkj@bellsouth.net>
+
+	5b31548: Version 1.2.7
+	01ce544: XmlRpc Client ID
+	c670ef1: openSUSE Tumbleweed
+	4177fd2: FD fields
+
+2021-02-07  David Freese  <w1hkj@bellsouth.net>
+
+	b140123: macOS Info.plist
+	4728862: export/import
+	010e980: mxe scripts
+	02c3ba3: mkappbundle
+	e824843: Version 1.2.6
+	79a7ecd: OS X build
+	7048549: Documentation
+	51bab10: Miscellaneous changes
+	78056ce: EQSLSDATE
+	e3959e0: FMHELL
+	0bec1bc: Dup check/reverse
+	0b619bd: XmlRpc Server
+	dd4c423: eQSL/LoTW submit dates
+	4798954: Duplicates
+	a8a8b8b: New/Cancel
+	0416ba9: gm date/time
+	861ce93: Export ADIF
+	d155fb7: QSOdb structure
+	c70f852: nulog
+	e2ea153: OS X build scripts
+	f7372e4: Merge resort
+	2b76381: Version 1.2.5
+	3cbfc7c: status log
+	f2a3c28: db update
+	2019450: Native File Chooser
+	1756254: xmlrpc update
+	4cfb5cf: win mingw
+	3992e49: flxmlrpc config
+
+2016-07-10  Kamal Mostafa  <kamal@whence.com>
+
+	21f9d43: fix XmlRpc tm_mday comparison typo
+
+2016-07-04  Robert Cunnings  <nw8l@whitemesa.com>
+
+	41f12d1: mxe update
+
+2016-06-23  David Freese  <iam_w1hkj@w1hkj.com>
+
+	7f7c302: Version 1.2.4
+	e6fc6a5: Cabrillo Report
+	f4bccc0: Contest fields
+	7f98283: Version 1.2.3
+	c16c3a4: Vertical Scrollbar
+	a48d61d: Version 1.2.2
+	a3be952: Resizable dialog
+	aeeadf3: Version 1.2.1
+	1b3f80a: MXE update
+
+2015-06-08  Kamal Mostafa  <kamal@whence.com>
+
+	f453b69: BUILD_{DATE,USER,HOST}
+
+2015-04-24  David Freese  <iam_w1hkj@w1hkj.com>
+
+	032c14e: Version 1.2.0
+	42220db: xmlrpc
+	bd151dd: FSF address
+	ef9421c: User interface
+	aa7c495: Version 1.1.9
+	680f0b8: fltk 1.3.3
+	6cdc6fa: build fix
+	fd63254: doxygen docs
+	28d5ec8: Version 1.1.8
+	1acc45a: Write database
+	be3e55e: Version 1.1.7
+	27e602c: QSL fields
+	47eb064: MXE build
+	72bdb67: Version 1.1.6
+	48ef102: fltk m4 script
+	91a7865: Combo update
+	530db58: Version 1.1.5
+	1b6ac7e: Main Dialog Size
+	c9c6aa8: License headers
+	4d11747: Version 1.1.4
+	16320f0: Colors-fonts-resizing
+	095282e: Version 1.1.3
+	12412f6: OS X File Chooser
+	83dc0c8: Version 1.1.2
+
+2012-05-16  david freese (none)  <dave@dave-laptop>
+
+	0c3266a: Log time
+
+2012-03-08  David Freese  <w1hkj@w1hkj.com>
+
+	95c11e4: Desktop
+	2ab6ba0: FLTK version
+	a987f6f: Version 1.1.1
+	b893355: FLTK 1.3 mods
+	c59b181: Version 1.1.0
+	3216a7d: R/W speedup
+	e4e928e: Log filename
+	d9b439b: Version 1.0.0
+	d742865: Version 0.9.907
+	abfbb80: Prefs
+	cbbbef1: Version 0.9.906
+	be3a323: Server port
+	7f0363e: Save sort order
+	83e086a: Version 0.9.905
+	e247981: Socket address
+	8de2815: County field
+	5d3afb2: Dup Check
+	2b1d4a2: Version 0.9.04
+	359ee07: Dup Check
+	1f99075: QSO_DATE_OFF addition
+	3d26eae: BAND check
+	d2f7659: Version 0.9.903
+	afcb055: Logbook Server
+	68166f1: Version 0.9.902
+	904b5bd: Starting Logbook
+	7af14a4: Version 0.9.901
+	23919a9: Field Limits
+	e8957e7: Logbook Init Branch
+	90ee9b1: Version 0.9.9
