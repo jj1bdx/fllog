@@ -8,6 +8,11 @@
 * This fork includes Kenji Rikitake's modification
 * Kenji does not test this distribution on Windows (only Linux and macOS only)
 
+## Tips to build on macOS
+
+* See `jj1bdx-configure-for-mac.sh`
+* Use `make appbundle` to build the App bundle
+
 ## LICENSE
 
 GPLv2 (See COPYING)
