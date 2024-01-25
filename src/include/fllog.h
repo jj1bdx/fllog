@@ -22,7 +22,10 @@
 #include <FL/Fl_Color_Chooser.H>
 #include <FL/fl_draw.H>
 
-#include "config.h"
+#ifndef BUILD_CONFIGURE_ARGS
+#	include <config.h>
+#endif
+
 #include "support.h"
 
 extern Fl_Double_Window *mainwindow;

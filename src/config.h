@@ -2,34 +2,34 @@
 /* src/config.h.in.  Generated from configure.ac by autoheader.  */
 
 /* Build platform */
-#define BUILD_BUILD_PLATFORM "x86_64-apple-darwin21.5.0"
+#define BUILD_BUILD_PLATFORM "arm-apple-darwin23.3.0"
 
 /* Compiler */
 #define BUILD_COMPILER "InstalledDir: /Library/Developer/CommandLineTools/usr/bin"
 
 /* Configure arguments */
-#define BUILD_CONFIGURE_ARGS "'--enable-static' 'LDFLAGS=-L/usr/local/lib'"
+#define BUILD_CONFIGURE_ARGS "'--enable-static' 'LDFLAGS=-L/opt/homebrew/lib'"
 
 /* Build date */
-#define BUILD_DATE "Mon Jun  6 00:22:10 JST 2022"
+#define BUILD_DATE "Thu Jan 25 21:47:25 JST 2024"
 
 /* Build host */
-#define BUILD_HOST "bigmac"
+#define BUILD_HOST "daimac.priv.k2r.org"
 
 /* Host platform */
-#define BUILD_HOST_PLATFORM "x86_64-apple-darwin21.5.0"
+#define BUILD_HOST_PLATFORM "arm-apple-darwin23.3.0"
 
 /* Target platform */
-#define BUILD_TARGET_PLATFORM "x86_64-apple-darwin21.5.0"
+#define BUILD_TARGET_PLATFORM "arm-apple-darwin23.3.0"
 
 /* Build user */
 #define BUILD_USER "kenji"
 
 /* FLLOG compiler flags */
-#define FLLOG_BUILD_CXXFLAGS "-I$(srcdir) -I$(srcdir)/include -I$(srcdir)/xmlrpcpp -I$(srcdir)/xmlrpcpp -I/usr/local/Cellar/fltk/1.3.8/include -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_THREAD_SAFE -D_REENTRANT -I$(srcdir) -I$(srcdir)/include -pipe -Wall -fexceptions -O2 -ffast-math -finline-functions -fomit-frame-pointer -DNDEBUG"
+#define FLLOG_BUILD_CXXFLAGS "-I$(srcdir) -I$(srcdir)/include -I$(srcdir)/xmlrpcpp -I$(srcdir)/xmlrpcpp -I/opt/homebrew/Cellar/fltk/1.3.9/include -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_THREAD_SAFE -D_REENTRANT -I$(srcdir) -I$(srcdir)/include -pipe -Wall -fexceptions -O2 -ffast-math -finline-functions -fomit-frame-pointer -DNDEBUG"
 
 /* FLLOG linker flags */
-#define FLLOG_BUILD_LDFLAGS "/usr/local/Cellar/fltk/1.3.8/lib/libfltk_images.a -lpng -lz -ljpeg /usr/local/Cellar/fltk/1.3.8/lib/libfltk.a -lpthread -framework Cocoa"
+#define FLLOG_BUILD_LDFLAGS "/opt/homebrew/Cellar/fltk/1.3.9/lib/libfltk_images.a -lpng -lz -ljpeg /opt/homebrew/Cellar/fltk/1.3.9/lib/libfltk.a -lpthread -framework Cocoa"
 
 /* FLTK API major version */
 #define FLLOG_FLTK_API_MAJOR 1
@@ -38,7 +38,7 @@
 #define FLLOG_FLTK_API_MINOR 3
 
 /* version string */
-#define FLLOG_VERSION "1.2.7.02"
+#define FLLOG_VERSION "1.2.8"
 
 /* major version number */
 #define FLLOG_VERSION_MAJOR 1
@@ -47,10 +47,10 @@
 #define FLLOG_VERSION_MINOR 2
 
 /* patch/alpha version string */
-#define FLLOG_VERSION_PATCH ".7.02"
+#define FLLOG_VERSION_PATCH ".8"
 
 /* FLTK version */
-#define FLTK_BUILD_VERSION "1.3.8"
+#define FLTK_BUILD_VERSION "1.3.9"
 
 /* flxmlrpc version */
 #define FLXMLRPC_BUILD_VERSION ""
@@ -197,7 +197,7 @@
 #define PACKAGE_NAME "FLLOG"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "FLLOG 1.2.7.02"
+#define PACKAGE_STRING "FLLOG 1.2.8"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "fllog"
@@ -206,7 +206,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "1.2.7.02"
+#define PACKAGE_VERSION "1.2.8"
 
 /* Define to 1 if all of the C90 standard headers exist (not just the ones
    required in a freestanding environment). This macro is provided for
@@ -308,23 +308,10 @@
 /* #undef USE_X */
 
 /* Version number of package */
-#define VERSION "1.2.7.02"
+#define VERSION "1.2.8"
 
 /* x version */
 /* #undef X_BUILD_VERSION */
-<<<<<<< HEAD
-
-/* Define to 1 if on MINIX. */
-/* #undef _MINIX */
-
-/* Define to 2 if the system does not provide POSIX.1 features except with
-   this defined. */
-/* #undef _POSIX_1_SOURCE */
-
-/* Define to 1 if you need to in order for `stat' and other things to work. */
-/* #undef _POSIX_SOURCE */
-=======
->>>>>>> main
 
 /* Define to 1 if we are building on cygwin or mingw */
 /* #undef _WINDOWS */

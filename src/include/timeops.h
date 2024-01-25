@@ -21,7 +21,10 @@
 #ifndef TIMEOPS_H_
 #define TIMEOPS_H_
 
-#include <config.h>
+#ifndef BUILD_CONFIGURE_ARGS
+#	include <config.h>
+#endif
+
 #include <time.h>
 #include <sys/time.h>
 

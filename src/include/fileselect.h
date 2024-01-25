@@ -1,7 +1,9 @@
 #ifndef FILESELECT_H
 #define FILESELECT_H
 
-#include <config.h>
+#ifndef BUILD_CONFIGURE_ARGS
+#	include <config.h>
+#endif
 
 //#ifdef __WIN32__
 //#  define FSEL_THREAD 1

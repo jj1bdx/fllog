@@ -3,7 +3,9 @@
 #ifndef UTIL_H
 #define UTIL_H
 
-#include "config.h"
+#ifndef BUILD_CONFIGURE_ARGS
+#	include <config.h>
+#endif
 
 #ifdef __cplusplus
 extern "C" {

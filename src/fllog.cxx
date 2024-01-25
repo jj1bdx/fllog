@@ -264,7 +264,6 @@ void LOGBOOK_colors_font()
 
 	ypos += wh + 4;
 	xpos = Tabs->x();
-	Tabs->resize(xpos, ypos, Tabs->w(), Tabs->h());
 
 	Fl_Input2* extras[] = {
 		inpCNTY_log, inpIOTA_log, inpCQZ_log,
@@ -691,6 +690,15 @@ int main (int argc, char *argv[])
 	make_pixmap(&Log_icon_pixmap, fllog_icon);
 	mainwindow->icon((char *)Log_icon_pixmap);
 	mainwindow->show(argc, argv);
+
+// read in the current window hints, then modify them to allow icon transparency
+	Pixmap mask = -1; // create pixmaps to hold the icon image and its mask
+	XWMHints* hints = XGetWMHints(fl_display, fl_xid(mainwindow));
+	hints->flags |= IconMaskHint; // ensure transparency mask is enabled for the XPM icon
+	hints->icon_mask = mask; // set the transparency mask
+	XSetWMHints(fl_display, fl_xid(mainwindow), hints);
+	XFree(hints);
+
 #else
 	mainwindow->show(argc, argv);
 #endif
